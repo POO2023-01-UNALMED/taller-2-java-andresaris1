@@ -1,0 +1,38 @@
+package main;
+
+public class Auto {
+	int cantidadcreados;
+	double precio;
+	String modelo;
+	String marca;
+	String motor;
+	int registro1;
+	int asientos;
+	
+	public Auto(String modelo, double precio, String marca, String motor, int registro1, int cantidadcreados) {
+		this.modelo = modelo;
+		this.precio = precio;
+		this.marca = marca;
+		this.motor = motor;
+		this.registro1 = registro1;
+		this.cantidadcreados = cantidadcreados;
+		this.asientos = 0;
+	}
+	
+	public int agregarasientos(int cantidadasientos) {
+		this.asientos += cantidadasientos;
+		return this.asientos;
+	}
+	
+	public boolean verificarIntegridad(int registro2, int registro3) {
+		if (this.registro1 == registro2 && registro2 == registro3) {
+			System.out.println("Auto original");
+			return true;
+		} else {
+			System.out.println("Las piezas no son originales");
+			return false;
+		}
+	}
+
+
+}
